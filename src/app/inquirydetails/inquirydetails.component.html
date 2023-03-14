@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="/customerportal/src/app/dashboard/" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3"  routerLink="/">KAAR TECH</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+           
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading"></div>
+                            <a class="nav-link"routerLink="/profile" routerLinkActive="active" ariaCurrentWhenActive="page">&nbsp;<span>Profile</span> </a>
+                            
+                            <a class="nav-link" routerLink="/saleorder" routerLinkActive="active" ariaCurrentWhenActive="page">&nbsp;<span>Sale Order</span> </a>
+                           
+                            <a class="nav-link" routerLink="/custmdeliv" routerLinkActive="active" ariaCurrentWhenActive="page">&nbsp;<span>Delivery</span> </a>
+                            <a class="nav-link" routerLink="/inquiry" routerLinkActive="active" ariaCurrentWhenActive="page">&nbsp;<span>Inquiry</span> </a> 
+                            <a class="nav-link" routerLink="/invoicedetails" routerLinkActive="active" ariaCurrentWhenActive="page">&nbsp;<span>InvoiceDetails</span></a> 
+                            <a class="nav-link" routerLink="/payages" routerLinkActive="active" ariaCurrentWhenActive="page">&nbsp;<span>Payage</span> </a> 
+                            <a class="nav-link" routerLink="/creditmemo" routerLinkActive="active" ariaCurrentWhenActive="page">&nbsp;<span>Credit/debit memo</span></a>
+                            <a class="nav-link" routerLink="/overallsales" routerLinkActive="active" ariaCurrentWhenActive="page">&nbsp;<span>Overall Sales</span></a>
+                          
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                        <div class="content"> 
+
+                        
+                            <div class="content-2">
+                                <div class="recent-payments">
+                                    <div class="title">
+                                        <h1>Inquery Request</h1>
+                                        
+                                    </div>
+                                   
+                                 <table>
+                                        <tr>
+                                            <tr>
+                                                <th>Client Id</th>
+                                                <th>Document Created</th>
+                                                <th>Document Date</th>
+                                                <th>Net value</th>
+                                                <th>Sale Document</th>
+                                                <th>Sold To</th>
+                                                <th>Telephone</th>
+                                                
+                                            
+                                        </tr>
+                                        <tr>
+                                   <!-- <tr *ngFor="let i of element | filter:searchText" > -->
+                                    <td> {{this.i[0].CREATED_BY._text}}</td>
+                                    <td> {{this.i[0].CREATED_ON._text}}</td> 
+                                    <td> {{this.i[0].DOCUMENT_DATE._text}}</td>
+                                   <td> {{this.i[0].NET_VALUE._text}}</td> 
+                                   <td> {{this.i[0].SALE_DOCUMENT._text}}</td>  
+                                   <td> {{this.i[0].SOLDTO_PARTY._text}}</td>
+                                   <td> {{this.i[0].TELEPHONE._text}}</td>
+                                            
+                                        </tr>
+                                       
+                                    </table>
+                                </div>
+                            </div>  
+                        </div>
+
+                   
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                           
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
